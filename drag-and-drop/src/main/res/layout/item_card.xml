@@ -6,9 +6,9 @@
     android:id="@+id/cv_item"
     android:layout_width="match_parent"
     android:layout_height="110dp"
+    android:layout_marginTop="7dp"
     android:layout_marginStart="7dp"
     android:layout_marginEnd="7dp"
-    android:layout_marginBottom="7dp"
     card_view:cardCornerRadius="4dp">
 
     <LinearLayout
@@ -17,44 +17,43 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ImageView
+            android:id="@+id/iv_card_icon"
+            tools:src="@mipmap/ic_launcher"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:padding="15dp" />
 
-            <ImageView
-                android:id="@+id/iv_card_icon"
-                tools:src="@mipmap/ic_launcher"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:padding="15dp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingStart="5dp"
+            android:paddingEnd="16dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:paddingStart="5dp"
-                android:paddingEnd="16dp"
-                android:gravity="center_vertical"
+            <TextView
+                android:id="@+id/tv_name"
+                tools:text="MY ITEM"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="#596d79"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content" />
 
-                <TextView
-                    android:id="@+id/tv_name"
-                    tools:text="MY ITEM"
-                    android:maxLines="1"
-                    android:ellipsize="end"
-                    android:textColor="#596d79"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_marginTop="5dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                tools:text="Description about item. Touch item and change position"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-                <TextView
-                    android:id="@+id/tv_description"
-                    android:layout_marginTop="5dp"
-                    android:maxLines="2"
-                    android:ellipsize="end"
-                    tools:text="Description about item. Touch item and change position"
-                    android:textSize="14sp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-            </LinearLayout>
+        </LinearLayout>
 
     </LinearLayout>
 
