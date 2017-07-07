@@ -1,7 +1,7 @@
 package ru.nikartm.drag_and_drop;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
@@ -11,12 +11,12 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
-import ru.nikartm.drag_and_drop.adapter.AdapterClickListener;
+import ru.nikartm.drag_and_drop.adapter.CallbackItemTouch;
 import ru.nikartm.drag_and_drop.adapter.ItemListAdapter;
 import ru.nikartm.drag_and_drop.adapter.ItemTouchHelperCallback;
 import ru.nikartm.drag_and_drop.model.DragItem;
 
-public class MainActivity extends AppCompatActivity implements CallbackItemTouch, AdapterClickListener {
+public class MainActivity extends AppCompatActivity implements CallbackItemTouch {
 
     public static final String TAG = MainActivity.class.getSimpleName();
 

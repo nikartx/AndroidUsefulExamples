@@ -19,7 +19,7 @@ import ru.nikartm.drag_and_drop.model.DragItem;
 
 public class ItemListAdapter extends RecyclerView.Adapter<ItemListAdapter.ItemViewHolder> {
 
-    private static AdapterClickListener clickListener = null;
+    private static CallbackItemTouch clickListener = null;
     private List<DragItem> itemList;
 
     public ItemListAdapter(List<DragItem> itemList) {
@@ -49,7 +49,7 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemListAdapter.ItemVi
         }
     }
 
-    public void setClickListener(AdapterClickListener clickListener) {
+    public void setClickListener(CallbackItemTouch clickListener) {
         ItemListAdapter.clickListener = clickListener;
     }
 

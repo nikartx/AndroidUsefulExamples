@@ -3,8 +3,6 @@ package ru.nikartm.drag_and_drop.adapter;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 
-import ru.nikartm.drag_and_drop.CallbackItemTouch;
-
 /**
  * @author Ivan Vodyasov on 07.07.2017.
  */
