@@ -7,6 +7,7 @@ import android.view.View;
  */
 
 public interface CallbackItemTouch {
-    void itemTouchOnMove(int oldPosition,int newPosition);
+    void itemDrag(int oldPosition, int newPosition);
+    void itemSwipe(int swipePosition);
     void itemClicked(View view, int position);
 }

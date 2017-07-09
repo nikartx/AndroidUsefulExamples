@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +21,6 @@ public class MainActivity extends AppCompatActivity implements CallbackItemTouch
 
     public static final String TAG = MainActivity.class.getSimpleName();
 
-    private RecyclerView rvItems;
     private ItemListAdapter adapter;
     private List<DragItem> itemList;
 
@@ -35,12 +35,12 @@ public class MainActivity extends AppCompatActivity implements CallbackItemTouch
         itemList = createItems();
         adapter = new ItemListAdapter(itemList);
         adapter.setClickListener(this);
-        rvItems = (RecyclerView) findViewById(R.id.rv_item_list);
-        rvItems.setLayoutManager(new LinearLayoutManager(this));
-        rvItems.setAdapter(adapter);
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rv_item_list);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(adapter);
         ItemTouchHelperCallback callback = new ItemTouchHelperCallback(this);
         ItemTouchHelper touchHelper = new ItemTouchHelper(callback);
-        touchHelper.attachToRecyclerView(rvItems);
+        touchHelper.attachToRecyclerView(recyclerView);
     }
 
     private List<DragItem> createItems() {
@@ -58,13 +58,21 @@ public class MainActivity extends AppCompatActivity implements CallbackItemTouch
     }
 
     @Override
-    public void itemTouchOnMove(int oldPosition, int newPosition) {
+    public void itemDrag(int oldPosition, int newPosition) {
         itemList.add(newPosition, itemList.remove(oldPosition));
         adapter.notifyItemMoved(oldPosition, newPosition);
     }
 
     @Override
+    public void itemSwipe(int swipePosition) {
+        itemList.remove(swipePosition);
+        adapter.notifyItemRemoved(swipePosition);
+    }
+
+    @Override
     public void itemClicked(View view, int position) {
+        Toast.makeText(this, "Selected position : " + itemList.get(position).getName(),
+                Toast.LENGTH_SHORT).show();
         Log.d(TAG, "Selected position : " + position);
     }
 }

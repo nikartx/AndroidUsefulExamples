@@ -17,19 +17,20 @@ public class ItemTouchHelperCallback extends ItemTouchHelper.Callback {
 
     @Override
     public int getMovementFlags(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
-        int flag = ItemTouchHelper.UP | ItemTouchHelper.DOWN;
-        return makeFlag(ItemTouchHelper.ACTION_STATE_DRAG , flag);
+        int dragFlags = ItemTouchHelper.UP | ItemTouchHelper.DOWN;
+        int swipeFlags = ItemTouchHelper.RIGHT;
+        return makeMovementFlags(dragFlags, swipeFlags);
     }
 
     @Override
     public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
-        itemTouch.itemTouchOnMove(viewHolder.getAdapterPosition(), target.getAdapterPosition());
+        itemTouch.itemDrag(viewHolder.getAdapterPosition(), target.getAdapterPosition());
         return true;
     }
 
     @Override
     public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
-        // swiped disabled
+        itemTouch.itemSwipe(viewHolder.getAdapterPosition());
     }
 
     @Override
@@ -39,6 +40,6 @@ public class ItemTouchHelperCallback extends ItemTouchHelper.Callback {
 
     @Override
     public boolean isItemViewSwipeEnabled() {
-        return false;
+        return true;
     }
 }

@@ -15,5 +15,5 @@ keytool -list -v -keystore "C:\Users\user_name\.android\debug.keystore" -alias a
 ```
 keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore -list -v
 ```
-## Drag And Drop
-Example drag and drop CardView for RecycleView
+## Drag And Drop, Swipe
+Example drag and drop and swipe CardView for RecycleView
