@@ -1,6 +1,7 @@
 package ru.nikartm.drag_and_drop.adapter;
 
 import android.graphics.Canvas;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 
@@ -18,9 +19,15 @@ public class ItemTouchHelperCallback extends ItemTouchHelper.Callback {
 
     @Override
     public int getMovementFlags(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
-        int dragFlags = ItemTouchHelper.UP | ItemTouchHelper.DOWN;
-        int swipeFlags = ItemTouchHelper.RIGHT;
-        return makeMovementFlags(dragFlags, swipeFlags);
+        if (recyclerView.getLayoutManager() instanceof GridLayoutManager) {
+            final int dragFlag = ItemTouchHelper.UP | ItemTouchHelper.DOWN | ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT;
+            final int swipeFlag = 0;
+            return makeMovementFlags(dragFlag, swipeFlag);
+        } else {
+            int dragFlag = ItemTouchHelper.UP | ItemTouchHelper.DOWN;
+            int swipeFlag = ItemTouchHelper.RIGHT;
+            return makeMovementFlags(dragFlag, swipeFlag);
+        }
     }
 
     @Override
