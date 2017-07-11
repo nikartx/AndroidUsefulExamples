@@ -1,7 +1,7 @@
 ## MultiTouch-Android
 Example of multi touch image for android (drag/zoom/rotate)
 
-## CalendarEvent
+## Google Calendar Event
 Example Google API Calendar Event
 
 

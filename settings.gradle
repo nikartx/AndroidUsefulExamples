@@ -1,1 +1,1 @@
-include ':multi-touch', ':calendar-event', ':drag-and-drop'
+include ':multi-touch', ':google-calendar-event', ':drag-and-drop'
