@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
         } else if (!Utils.isDeviceOnline(this)) {
             tvInfo.setText("No network connection available.");
         } else {
-            adapter.clearEventItem();
+            adapter.clearEventList();
             new MakeRequestTask(mCredential).execute();
         }
     }
@@ -317,7 +317,7 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
         }
 
         /**
-         * Fetch a list of the next 10 events from the primary calendar.
+         * Fetch a list of the events from the primary calendar.
          * @return List of Events
          * @throws IOException
          */

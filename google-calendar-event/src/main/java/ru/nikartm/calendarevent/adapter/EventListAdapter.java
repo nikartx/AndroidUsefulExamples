@@ -15,6 +15,7 @@ import ru.nikartm.calendarevent.model.EventItem;
 import ru.nikartm.calendarevent.util.Utils;
 
 /**
+ * Adapter for event items
  * @author Ivan Vodyasov on 11.07.2017.
  */
 
@@ -87,7 +88,7 @@ public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.Item
         return eventList.get(position);
     }
 
-    public void clearEventItem() {
+    public void clearEventList() {
         if (eventList != null) {
             eventList.clear();
             notifyDataSetChanged();
