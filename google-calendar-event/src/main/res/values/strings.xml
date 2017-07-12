@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CalendarEvent</string>
+    <string name="upload_events">Upload events</string>
 </resources>

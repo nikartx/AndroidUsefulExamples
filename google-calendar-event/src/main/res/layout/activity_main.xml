@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/tv_info"
-        tools:text="Text"
+        android:text="@string/upload_events"
         android:gravity="center"
         android:visibility="gone"
         android:layout_width="match_parent"
