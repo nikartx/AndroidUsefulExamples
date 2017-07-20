@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/carousel_cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="135dp"
+                    android:layout_gravity="center"
+                    tools:src="@drawable/img_1"/>
+
+                <ImageView
+                    android:id="@+id/iv_favorite"
+                    android:visibility="gone"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/ic_favorite"/>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_item_name"
+                android:gravity="center"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:paddingStart="7dp"
+                android:paddingEnd="7dp"
+                android:textSize="14sp"
+                android:textColor="@color/color_primary_text"
+                tools:text="Item Name" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

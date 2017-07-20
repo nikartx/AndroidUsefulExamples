@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Carousel-ViewPager</string>
+
+    <string name="transform_carousel">Transform carousel</string>
+    <string name="choose_you_hero">Choose You Hero</string>
+
 </resources>
