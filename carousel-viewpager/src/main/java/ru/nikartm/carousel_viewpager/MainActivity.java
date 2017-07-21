@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         return list;
     }
 
-    private void initCarousel(){
+    private void initCarousel() {
         if (cslItem == null || cslItem.size() == 0) {
             return;
         }

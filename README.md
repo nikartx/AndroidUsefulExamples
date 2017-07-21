@@ -1,10 +1,10 @@
 ## MultiTouch-Android
-Example of multi touch image for android (drag/zoom/rotate)
+Multi touch image for android (drag/zoom/rotate) [Example.](https://github.com/nikartm/AndroidUsefulExamples/tree/master/multi-touch)
 
 ![multi_touch](https://raw.githubusercontent.com/nikartm/AndroidUsefulExamples/master/screenshots/multi_touch.gif)
 
 ## Google Calendar Event
-Example Google API Calendar Event
+Google API Calendar Event [Example.](https://github.com/nikartm/AndroidUsefulExamples/tree/master/google-calendar-event)
 
 ![calendar_event](https://raw.githubusercontent.com/nikartm/AndroidUsefulExamples/master/screenshots/calendar_event.gif)
 
@@ -19,6 +19,11 @@ keytool -list -v -keystore "C:\Users\user_name\.android\debug.keystore" -alias a
 keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore -list -v
 ```
 ## Drag And Drop, Swipe
-Example drag and drop and swipe CardView for RecycleView
+Drag and drop and swipe CardView for RecycleView [Example.](https://github.com/nikartm/AndroidUsefulExamples/tree/master/drag-and-drop)
 
 ![drag_and_drop_swipe](https://raw.githubusercontent.com/nikartm/AndroidUsefulExamples/master/screenshots/drag_and_drop_swipe.gif)
+
+## Carousel ViewPager
+Carousel with ViewPager and scaling [Example.](https://github.com/nikartm/AndroidUsefulExamples/tree/master/carousel-viewpager)
+
+![carousel](https://raw.githubusercontent.com/nikartm/AndroidUsefulExamples/master/screenshots/carousel_viewpager.gif)
